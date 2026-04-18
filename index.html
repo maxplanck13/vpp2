@@ -12,28 +12,58 @@
 </head>
 <body>
 
-    <!-- Floating Nature Particles (JS renders these) -->
+    <!-- ░░ SPLASH SCREEN ░░ -->
+    <div id="splash">
+        <div class="splash-inner">
+            <div class="splash-leaf">🌿</div>
+            <div class="splash-brand">VPACK <em>Pulp</em></div>
+            <div class="splash-sub">Sustainable · Biodegradable · Handcrafted</div>
+            <div class="splash-bar"><div class="splash-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ░░ SCROLL PROGRESS BAR ░░ -->
+    <div id="scrollProgress"></div>
+
+    <!-- ░░ CUSTOM CURSOR ░░ -->
+    <div id="cursorDot"></div>
+    <div id="cursorRing"></div>
+
+    <!-- ░░ CURSOR LEAF TRAIL CONTAINER ░░ -->
+    <div id="leafTrail"></div>
+
+    <!-- ░░ TOAST NOTIFICATION ░░ -->
+    <div id="toast">
+        <span id="toastEmoji">🌿</span>
+        <span id="toastMsg">Welcome to Vpack Pulp!</span>
+    </div>
+
+    <!-- ░░ FLOATING NATURE PARTICLES (JS fills these) ░░ -->
     <div id="particles-canvas"></div>
 
-    <!-- ===== PINNED HEADER ===== -->
+    <!-- ════════════════════════════════════════
+         PINNED HEADER
+    ════════════════════════════════════════ -->
     <header class="navbar" id="navbar">
         <div class="nav-inner">
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" id="logoLink">
                 <span class="logo-leaf">🌿</span>
                 <span class="logo-text">VPACK <em>Pulp</em></span>
             </a>
             <nav class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active" data-section="home">Home</a>
-                <a href="#products" class="nav-link" data-section="products">Products</a>
-                <a href="#sustainability" class="nav-link" data-section="sustainability">Sustainability</a>
-                <a href="#about" class="nav-link" data-section="about">About Us</a>
-                <a href="#reviews" class="nav-link" data-section="reviews">Reviews</a>
+                <a href="#home"           class="nav-link active" data-section="home">Home</a>
+                <a href="#products"       class="nav-link"        data-section="products">Products</a>
+                <a href="#sustainability" class="nav-link"        data-section="sustainability">Sustainability</a>
+                <a href="#about"          class="nav-link"        data-section="about">About Us</a>
+                <a href="#reviews"        class="nav-link"        data-section="reviews">Reviews</a>
             </nav>
             <div class="nav-cta">
-                <a href="tel:+919443302468" class="btn-call" id="callBtn">
+                <a href="tel:+919443302468"
+                   class="btn-call magnetic-btn" id="callBtn">
                     <span class="btn-icon">📞</span> Call Us
                 </a>
-                <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20Vpack%20Pulp%20Products." class="btn-whatsapp" id="whatsappBtn" target="_blank">
+                <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20Vpack%20Pulp%20Products."
+                   class="btn-whatsapp magnetic-btn" id="whatsappBtn" target="_blank">
                     <span class="btn-icon">💬</span> WhatsApp
                 </a>
             </div>
@@ -43,9 +73,14 @@
         </div>
     </header>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════ -->
     <section id="home" class="hero">
-        <!-- Animated background leaves -->
+        <div class="hero-gradient-orb orb1"></div>
+        <div class="hero-gradient-orb orb2"></div>
+        <div class="hero-gradient-orb orb3"></div>
+
         <div class="hero-bg-leaves">
             <div class="leaf l1">🍃</div>
             <div class="leaf l2">🌿</div>
@@ -55,99 +90,105 @@
         </div>
 
         <div class="hero-container">
-            <div class="hero-text-block fade-in-up" style="--delay: 0.1s;">
+            <div class="hero-text-block fade-in-up" style="--delay:0.2s">
                 <div class="hero-tag">
-                    <span class="dot"></span> Tamil Nadu's Eco Packaging Pioneer
+                    <span class="dot"></span>
+                    Tamil Nadu's Eco Packaging Pioneer
                 </div>
+
                 <h1 class="hero-headline">
                     Packaging that<br>
-                    <em class="hero-em">loves the Earth</em><br>
+                    <span class="typewriter-wrap">
+                        <em class="hero-em" id="typewriterEl"></em><span class="type-cursor">|</span>
+                    </span><br>
                     as much as you do.
                 </h1>
+
                 <p class="hero-sub">
-                    Premium paper pulp egg trays — biodegradable, durable, and crafted with care.<br>
-                    Trusted by farms and retailers across South India.
+                    Premium paper pulp egg trays — biodegradable, durable, and crafted with care.
+                    Trusted by farms &amp; retailers across South India.
                 </p>
+
                 <div class="hero-actions">
-                    <a href="#products" class="btn-primary">Explore Products <span class="btn-arrow">→</span></a>
-                    <a href="tel:+919443302468" class="btn-ghost">Get a Quote</a>
+                    <a href="#products" class="btn-primary magnetic-btn ripple-btn" id="heroExploreBtn">
+                        Explore Products <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="tel:+919443302468" class="btn-ghost magnetic-btn ripple-btn">Get a Quote</a>
                 </div>
+
                 <div class="hero-trust-bar">
-                    <div class="trust-item"><span class="trust-num" data-count="18">0</span>+ Categories</div>
+                    <div class="trust-item">
+                        <span class="trust-num" data-count="18">0</span>+ Categories
+                    </div>
                     <div class="trust-divider"></div>
-                    <div class="trust-item"><span class="trust-num" data-count="100">0</span>% Biodegradable</div>
+                    <div class="trust-item">
+                        <span class="trust-num" data-count="100">0</span>% Biodegradable
+                    </div>
                     <div class="trust-divider"></div>
-                    <div class="trust-item"><span class="trust-num" data-count="4">0</span>.3★ Rating</div>
+                    <div class="trust-item">
+                        <span class="trust-num" data-count="4" data-decimal>0</span>.3★ Rating
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-visual-block fade-in-up" style="--delay: 0.35s;">
+            <div class="hero-visual-block fade-in-up" style="--delay:0.4s">
                 <div class="hero-image-frame">
-                    <img src="./images/12eggs.webp" alt="Vpack Pulp Egg Packaging" class="hero-main-img">
+                    <img src="./images/12eggs.webp" alt="Vpack Pulp Egg Packaging" class="hero-main-img" id="heroImg">
                     <div class="frame-deco frame-deco-tl"></div>
                     <div class="frame-deco frame-deco-br"></div>
+                    <div class="hero-img-shine"></div>
                 </div>
-                <div class="floating-badge badge-eco">
-                    ♻️ <strong>Zero</strong> Plastic
-                </div>
-                <div class="floating-badge badge-made">
-                    🇮🇳 Made in India
-                </div>
-                <div class="floating-badge badge-cert">
-                    🌿 100% Natural Pulp
-                </div>
+                <div class="floating-badge badge-eco">♻️ <strong>Zero</strong> Plastic</div>
+                <div class="floating-badge badge-made">🇮🇳 Made in India</div>
+                <div class="floating-badge badge-cert">🌿 100% Natural Pulp</div>
             </div>
         </div>
 
-        <!-- Scroll indicator -->
         <div class="scroll-cue">
             <span>Scroll to explore</span>
             <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- ===== MARQUEE TICKER ===== -->
+    <!-- ░░ MARQUEE TICKER 1 ░░ -->
     <div class="ticker-strip">
         <div class="ticker-track">
-            <span>★ 100% RECYCLABLE</span>
-            <span>★ ZERO PLASTIC WASTE</span>
-            <span>★ FARM FRESH PACKAGING</span>
-            <span>★ PROUDLY MADE IN INDIA</span>
-            <span>★ BIODEGRADABLE PULP</span>
-            <span>★ SUSTAINABLY CRAFTED</span>
-            <span>★ ECO-FIRST PHILOSOPHY</span>
-            <span>★ 100% RECYCLABLE</span>
-            <span>★ ZERO PLASTIC WASTE</span>
-            <span>★ FARM FRESH PACKAGING</span>
-            <span>★ PROUDLY MADE IN INDIA</span>
-            <span>★ BIODEGRADABLE PULP</span>
-            <span>★ SUSTAINABLY CRAFTED</span>
-            <span>★ ECO-FIRST PHILOSOPHY</span>
+            <span>★ 100% RECYCLABLE</span><span>★ ZERO PLASTIC WASTE</span>
+            <span>★ FARM FRESH PACKAGING</span><span>★ PROUDLY MADE IN INDIA</span>
+            <span>★ BIODEGRADABLE PULP</span><span>★ SUSTAINABLY CRAFTED</span>
+            <span>★ ECO-FIRST PHILOSOPHY</span><span>★ 100% RECYCLABLE</span>
+            <span>★ ZERO PLASTIC WASTE</span><span>★ FARM FRESH PACKAGING</span>
+            <span>★ PROUDLY MADE IN INDIA</span><span>★ BIODEGRADABLE PULP</span>
+            <span>★ SUSTAINABLY CRAFTED</span><span>★ ECO-FIRST PHILOSOPHY</span>
         </div>
     </div>
 
-    <!-- ===== PRODUCTS SECTION ===== -->
+    <!-- ════════════════════════════════════════
+         PRODUCTS SECTION
+    ════════════════════════════════════════ -->
     <section id="products" class="section products-section">
+        <div class="products-bg-shape"></div>
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-eyebrow">🛒 What We Offer</div>
                 <h2 class="section-title">Our Product <em>Catalog</em></h2>
-                <p class="section-sub">Each product is crafted from 100% recycled pulp. Tap any card to order instantly via WhatsApp.</p>
+                <p class="section-sub">Each product is crafted from 100% recycled pulp. Click any card to order instantly via WhatsApp.</p>
             </div>
 
             <div class="product-filter-bar reveal">
-                <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="tray">Egg Trays</button>
-                <button class="filter-btn" data-filter="box">Boxes</button>
+                <button class="filter-btn active ripple-btn" data-filter="all">All Products</button>
+                <button class="filter-btn ripple-btn" data-filter="tray">Egg Trays</button>
+                <button class="filter-btn ripple-btn" data-filter="box">Boxes</button>
             </div>
 
             <div class="product-grid">
                 <!-- Product 1 -->
-                <div class="product-card reveal" data-category="tray" style="--card-delay: 0.1s;">
+                <div class="product-card reveal stagger-card" data-category="tray" style="--i:0">
                     <div class="product-img-wrap">
                         <img src="./images/6 eggs with lock.webp" class="product-img" alt="6 Cavity Locked Tray">
                         <div class="product-overlay">
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Paper%20Pulp%206%20Cavity%20Tray." class="overlay-btn" target="_blank">Order via WhatsApp →</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Paper%20Pulp%206%20Cavity%20Tray."
+                               class="overlay-btn confetti-btn" target="_blank">Order via WhatsApp →</a>
                         </div>
                         <div class="product-badge">Most Popular</div>
                     </div>
@@ -163,17 +204,19 @@
                                 <span class="price-label">From</span>
                                 <span class="price-val">₹ 2 <small>/ pc</small></span>
                             </div>
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Paper%20Pulp%206%20Cavity%20Tray." class="btn-order" target="_blank">🛒 Order Now</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Paper%20Pulp%206%20Cavity%20Tray."
+                               class="btn-order ripple-btn confetti-btn" target="_blank">🛒 Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 2 -->
-                <div class="product-card reveal" data-category="box" style="--card-delay: 0.2s;">
+                <div class="product-card reveal stagger-card" data-category="box" style="--i:1">
                     <div class="product-img-wrap">
                         <img src="./images/12eggs.webp" class="product-img" alt="12 Cavity Moulded Box">
                         <div class="product-overlay">
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2012%20Cavity%20Moulded%20Box." class="overlay-btn" target="_blank">Order via WhatsApp →</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2012%20Cavity%20Moulded%20Box."
+                               class="overlay-btn confetti-btn" target="_blank">Order via WhatsApp →</a>
                         </div>
                     </div>
                     <div class="product-body">
@@ -188,17 +231,19 @@
                                 <span class="price-label">From</span>
                                 <span class="price-val">₹ 2 <small>/ pc</small></span>
                             </div>
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2012%20Cavity%20Moulded%20Box." class="btn-order" target="_blank">🛒 Order Now</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2012%20Cavity%20Moulded%20Box."
+                               class="btn-order ripple-btn confetti-btn" target="_blank">🛒 Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 3 -->
-                <div class="product-card reveal" data-category="tray" style="--card-delay: 0.3s;">
+                <div class="product-card reveal stagger-card" data-category="tray" style="--i:2">
                     <div class="product-img-wrap">
                         <img src="./images/12 eggs 3.webp" class="product-img" alt="10 Egg Premium Tray">
                         <div class="product-overlay">
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2010%20Egg%20Premium%20Tray." class="overlay-btn" target="_blank">Order via WhatsApp →</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2010%20Egg%20Premium%20Tray."
+                               class="overlay-btn confetti-btn" target="_blank">Order via WhatsApp →</a>
                         </div>
                         <div class="product-badge badge-premium">Premium</div>
                     </div>
@@ -214,17 +259,19 @@
                                 <span class="price-label">From</span>
                                 <span class="price-val">₹ 4.5 <small>/ pc</small></span>
                             </div>
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2010%20Egg%20Premium%20Tray." class="btn-order" target="_blank">🛒 Order Now</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%2010%20Egg%20Premium%20Tray."
+                               class="btn-order ripple-btn confetti-btn" target="_blank">🛒 Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 4 -->
-                <div class="product-card reveal" data-category="tray" style="--card-delay: 0.4s;">
+                <div class="product-card reveal stagger-card" data-category="tray" style="--i:3">
                     <div class="product-img-wrap">
                         <img src="./images/6 egg without lock.webp" class="product-img" alt="Classic Open Tray">
                         <div class="product-overlay">
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Classic%20Open%20Tray." class="overlay-btn" target="_blank">Order via WhatsApp →</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Classic%20Open%20Tray."
+                               class="overlay-btn confetti-btn" target="_blank">Order via WhatsApp →</a>
                         </div>
                     </div>
                     <div class="product-body">
@@ -239,17 +286,19 @@
                                 <span class="price-label">From</span>
                                 <span class="price-val">₹ 2.5 <small>/ pc</small></span>
                             </div>
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Classic%20Open%20Tray." class="btn-order" target="_blank">🛒 Order Now</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Classic%20Open%20Tray."
+                               class="btn-order ripple-btn confetti-btn" target="_blank">🛒 Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 5 -->
-                <div class="product-card reveal" data-category="box" style="--card-delay: 0.5s;">
+                <div class="product-card reveal stagger-card" data-category="box" style="--i:4">
                     <div class="product-img-wrap">
                         <img src="./images/12eggs 2.webp" class="product-img" alt="Retail Packaging Box">
                         <div class="product-overlay">
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Retail%20Packaging%20Box." class="overlay-btn" target="_blank">Order via WhatsApp →</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20the%20Retail%20Packaging%20Box."
+                               class="overlay-btn confetti-btn" target="_blank">Order via WhatsApp →</a>
                         </div>
                         <div class="product-badge badge-new">New</div>
                     </div>
@@ -265,26 +314,35 @@
                                 <span class="price-label">Custom</span>
                                 <span class="price-val">₹ On Request</span>
                             </div>
-                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20custom%20Retail%20Packaging%20Boxes." class="btn-order" target="_blank">🛒 Order Now</a>
+                            <a href="https://wa.me/919443302468?text=Hello!%20I'm%20interested%20in%20custom%20Retail%20Packaging%20Boxes."
+                               class="btn-order ripple-btn confetti-btn" target="_blank">🛒 Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- CTA Card -->
-                <div class="product-card product-card-cta reveal" style="--card-delay: 0.6s;">
+                <div class="product-card product-card-cta reveal stagger-card" style="--i:5">
                     <div class="cta-card-inner">
                         <div class="cta-icon">📦</div>
                         <h3>Need Custom Sizes?</h3>
                         <p>We manufacture in bulk with custom dimensions and branding. Reach us directly for a tailored quote.</p>
-                        <a href="https://wa.me/919443302468?text=Hello!%20I%20need%20a%20custom%20packaging%20solution." class="btn-primary" target="_blank">Enquire on WhatsApp</a>
-                        <a href="tel:+919443302468" class="btn-ghost" style="margin-top: 15px; display: inline-block;">Or Call Directly</a>
+                        <a href="https://wa.me/919443302468?text=Hello!%20I%20need%20a%20custom%20packaging%20solution."
+                           class="btn-primary ripple-btn confetti-btn" target="_blank" style="color:#fff!important">
+                            Enquire on WhatsApp
+                        </a>
+                        <a href="tel:+919443302468"
+                           class="btn-ghost ripple-btn" style="margin-top:15px;display:inline-block;color:var(--cream)!important;border-color:rgba(247,243,236,0.35)">
+                            Or Call Directly
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SUSTAINABILITY / GREEN ADVANTAGE ===== -->
+    <!-- ════════════════════════════════════════
+         SUSTAINABILITY / GREEN ADVANTAGE
+    ════════════════════════════════════════ -->
     <section id="sustainability" class="section sustainability-section">
         <div class="container">
             <div class="section-header reveal">
@@ -294,63 +352,44 @@
             </div>
 
             <div class="green-grid">
-                <div class="green-card reveal" style="--gc-delay: 0.1s;">
-                    <div class="green-icon-wrap">
-                        <span class="green-icon">🌱</span>
-                        <div class="green-ring"></div>
-                    </div>
+                <div class="green-card reveal" style="--gc-delay:0.05s">
+                    <div class="green-icon-wrap"><span class="green-icon">🌱</span><div class="green-ring"></div></div>
                     <h3>100% Biodegradable</h3>
                     <p>Returns to the earth in 60–90 days. No microplastics, no landfill burden. Just nature, restored.</p>
                     <div class="green-stat">60–90 Days to Decompose</div>
                 </div>
-                <div class="green-card reveal" style="--gc-delay: 0.2s;">
-                    <div class="green-icon-wrap">
-                        <span class="green-icon">🛡️</span>
-                        <div class="green-ring"></div>
-                    </div>
+                <div class="green-card reveal" style="--gc-delay:0.1s">
+                    <div class="green-icon-wrap"><span class="green-icon">🛡️</span><div class="green-ring"></div></div>
                     <h3>Superior Protection</h3>
-                    <p>Moulded fibre offers 3× the shock absorption compared to brittle plastic. Fewer breakages, more profit.</p>
+                    <p>Moulded fibre offers 3× the shock absorption vs brittle plastic. Fewer breakages, more profit.</p>
                     <div class="green-stat">3× Better Shock Absorption</div>
                 </div>
-                <div class="green-card reveal" style="--gc-delay: 0.3s;">
-                    <div class="green-icon-wrap">
-                        <span class="green-icon">♻️</span>
-                        <div class="green-ring"></div>
-                    </div>
+                <div class="green-card reveal" style="--gc-delay:0.15s">
+                    <div class="green-icon-wrap"><span class="green-icon">♻️</span><div class="green-ring"></div></div>
                     <h3>Circular Economy</h3>
                     <p>Made from 100% post-consumer recycled paper pulp. Each tray saves trees and closes the waste loop.</p>
                     <div class="green-stat">100% Recycled Raw Materials</div>
                 </div>
-                <div class="green-card reveal" style="--gc-delay: 0.4s;">
-                    <div class="green-icon-wrap">
-                        <span class="green-icon">💧</span>
-                        <div class="green-ring"></div>
-                    </div>
+                <div class="green-card reveal" style="--gc-delay:0.2s">
+                    <div class="green-icon-wrap"><span class="green-icon">💧</span><div class="green-ring"></div></div>
                     <h3>Water-Smart Production</h3>
                     <p>Our pulp moulding process uses significantly less water than conventional plastic manufacturing.</p>
                     <div class="green-stat">Lower Water Footprint</div>
                 </div>
-                <div class="green-card reveal" style="--gc-delay: 0.5s;">
-                    <div class="green-icon-wrap">
-                        <span class="green-icon">🏭</span>
-                        <div class="green-ring"></div>
-                    </div>
+                <div class="green-card reveal" style="--gc-delay:0.25s">
+                    <div class="green-icon-wrap"><span class="green-icon">🏭</span><div class="green-ring"></div></div>
                     <h3>Local Manufacturing</h3>
-                    <p>Produced right here in Koothappar, Tamil Nadu. Supporting local livelihoods and reducing carbon miles.</p>
+                    <p>Produced in Koothappar, Tamil Nadu. Supporting local livelihoods and reducing carbon miles.</p>
                     <div class="green-stat">100% Made in Tamil Nadu</div>
                 </div>
-                <div class="green-card reveal" style="--gc-delay: 0.6s;">
-                    <div class="green-icon-wrap">
-                        <span class="green-icon">📐</span>
-                        <div class="green-ring"></div>
-                    </div>
+                <div class="green-card reveal" style="--gc-delay:0.3s">
+                    <div class="green-icon-wrap"><span class="green-icon">📐</span><div class="green-ring"></div></div>
                     <h3>Custom-Fit Design</h3>
-                    <p>From 6-cavity to 30-cavity and beyond. Every size, custom-moulded to your exact farm or retail needs.</p>
+                    <p>From 6-cavity to 30-cavity and beyond. Every size, custom-moulded to your exact needs.</p>
                     <div class="green-stat">Bespoke Sizing Available</div>
                 </div>
             </div>
 
-            <!-- Animated Earth Counter Banner -->
             <div class="impact-banner reveal">
                 <div class="impact-stat">
                     <span class="impact-num" data-count="50000">0</span>
@@ -370,31 +409,30 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT US & VISION ===== -->
+    <!-- ════════════════════════════════════════
+         ABOUT US & VISION
+    ════════════════════════════════════════ -->
     <section id="about" class="section about-section">
-        <!-- Decorative watermark -->
         <div class="about-watermark">🌿</div>
-
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-eyebrow">🏡 Our Story</div>
-                <h2 class="section-title">Our Roots & <em>Vision</em></h2>
+                <h2 class="section-title">Our Roots &amp; <em>Vision</em></h2>
                 <p class="section-sub">Rooted in Tamil Nadu. Growing for the planet.</p>
             </div>
 
             <div class="about-layout">
-                <!-- Left Panel: About -->
                 <div class="about-panel reveal">
                     <div class="panel-label">About Us</div>
                     <h3 class="panel-heading">Born from the <em>heart of India's farmland.</em></h3>
-                    <p>At <strong>V Pack Pulp Products</strong>, we specialize in providing high-quality, sustainable, and eco-friendly paper egg boxes designed to protect and preserve eggs during transportation and storage.</p>
+                    <p>At <strong>V Pack Pulp Products</strong>, we specialize in high-quality, sustainable, and eco-friendly paper egg boxes designed to protect and preserve eggs during transportation and storage.</p>
                     <p>Using recycled materials and biodegradable pulp, our egg cartons offer an environmentally responsible alternative to plastic packaging.</p>
-                    <p>Whether you're a small farm, a grocery chain, or a packaging supplier — our custom-designed paper boxes are tailored to meet your specific needs while promoting sustainability.</p>
+                    <p>Whether you're a small farm, a grocery chain, or a packaging supplier — our custom-designed boxes are tailored to meet your needs while promoting sustainability.</p>
                     <div class="about-founder-card">
                         <div class="founder-avatar">S</div>
                         <div class="founder-info">
                             <strong>S. Subramanian</strong>
-                            <span>Proprietor & Founder</span>
+                            <span>Proprietor &amp; Founder</span>
                             <span class="founder-location">📍 Koothappar, Tamil Nadu</span>
                         </div>
                     </div>
@@ -405,29 +443,16 @@
                     </div>
                 </div>
 
-                <!-- Right Panel: Vision -->
                 <div class="vision-panel reveal">
                     <div class="panel-label label-vision">Our Vision</div>
                     <h3 class="panel-heading">A <em>plastic-free future</em> for every farm in India.</h3>
-                    <p>We see a future where every farm in India operates with zero plastic waste. From the smallest village poultry yard to the largest industrial hatchery — our mission is to scale sustainable packaging solutions to every corner of the nation.</p>
-                    <p>By blending traditional agricultural values with cutting-edge pulp-moulding manufacturing, we are leading the charge towards a greener tomorrow for the egg industry.</p>
+                    <p>We see a future where every farm in India operates with zero plastic waste. From the smallest village poultry yard to the largest industrial hatchery — our mission is to scale sustainable packaging to every corner of the nation.</p>
+                    <p>By blending traditional agricultural values with cutting-edge pulp-moulding manufacturing, we are leading the charge towards a greener tomorrow.</p>
                     <div class="vision-pillars">
-                        <div class="pillar">
-                            <span class="pillar-icon">🎯</span>
-                            <span>Zero Plastic by 2030</span>
-                        </div>
-                        <div class="pillar">
-                            <span class="pillar-icon">🤝</span>
-                            <span>Farmer-First Pricing</span>
-                        </div>
-                        <div class="pillar">
-                            <span class="pillar-icon">🌏</span>
-                            <span>Pan-India Distribution</span>
-                        </div>
-                        <div class="pillar">
-                            <span class="pillar-icon">💡</span>
-                            <span>Innovation in Packaging</span>
-                        </div>
+                        <div class="pillar"><span class="pillar-icon">🎯</span><span>Zero Plastic by 2030</span></div>
+                        <div class="pillar"><span class="pillar-icon">🤝</span><span>Farmer-First Pricing</span></div>
+                        <div class="pillar"><span class="pillar-icon">🌏</span><span>Pan-India Distribution</span></div>
+                        <div class="pillar"><span class="pillar-icon">💡</span><span>Innovation in Packaging</span></div>
                     </div>
                     <blockquote class="vision-quote">
                         "Our products are durable, lightweight, and fully recyclable — the ideal choice for businesses committed to reducing their environmental footprint."
@@ -435,7 +460,6 @@
                 </div>
             </div>
 
-            <!-- Business Factsheet -->
             <div class="factsheet reveal">
                 <div class="factsheet-title">📋 Company Factsheet</div>
                 <div class="factsheet-grid">
@@ -452,7 +476,7 @@
         </div>
     </section>
 
-    <!-- ===== SECOND TICKER (reverse) ===== -->
+    <!-- ░░ MARQUEE TICKER 2 ░░ -->
     <div class="ticker-strip ticker-reverse">
         <div class="ticker-track-reverse">
             <span>🌾 KOOTHAPPAR TAMIL NADU</span>
@@ -466,7 +490,9 @@
         </div>
     </div>
 
-    <!-- ===== REVIEWS / TESTIMONIALS ===== -->
+    <!-- ════════════════════════════════════════
+         REVIEWS
+    ════════════════════════════════════════ -->
     <section id="reviews" class="section reviews-section">
         <div class="container">
             <div class="section-header reveal">
@@ -475,36 +501,31 @@
                 <p class="section-sub">Real feedback from our agricultural partners and retail clients.</p>
             </div>
 
-            <!-- Rating Overview -->
             <div class="rating-overview reveal">
                 <div class="rating-big">
                     <span class="rating-num">4.3</span>
-                    <div class="rating-stars">★★★★<span style="opacity:0.4;">★</span></div>
+                    <div class="rating-stars">★★★★<span style="opacity:.35">★</span></div>
                     <span class="rating-count">12 Verified Reviews</span>
                 </div>
                 <div class="rating-bars">
-                    <div class="rbar-row"><span>5★</span><div class="rbar-track"><div class="rbar-fill" style="width: 42%; --w: 42%;"></div></div><span>42%</span></div>
-                    <div class="rbar-row"><span>4★</span><div class="rbar-track"><div class="rbar-fill" style="width: 42%; --w: 42%;"></div></div><span>42%</span></div>
-                    <div class="rbar-row"><span>3★</span><div class="rbar-track"><div class="rbar-fill" style="width: 0%; --w: 0%;"></div></div><span>0%</span></div>
-                    <div class="rbar-row"><span>2★</span><div class="rbar-track"><div class="rbar-fill" style="width: 8%; --w: 8%;"></div></div><span>8%</span></div>
-                    <div class="rbar-row"><span>1★</span><div class="rbar-track"><div class="rbar-fill" style="width: 8%; --w: 8%;"></div></div><span>8%</span></div>
+                    <div class="rbar-row"><span>5★</span><div class="rbar-track"><div class="rbar-fill" style="--w:42%"></div></div><span>42%</span></div>
+                    <div class="rbar-row"><span>4★</span><div class="rbar-track"><div class="rbar-fill" style="--w:42%"></div></div><span>42%</span></div>
+                    <div class="rbar-row"><span>3★</span><div class="rbar-track"><div class="rbar-fill" style="--w:0%"></div></div><span>0%</span></div>
+                    <div class="rbar-row"><span>2★</span><div class="rbar-track"><div class="rbar-fill" style="--w:8%"></div></div><span>8%</span></div>
+                    <div class="rbar-row"><span>1★</span><div class="rbar-track"><div class="rbar-fill" style="--w:8%"></div></div><span>8%</span></div>
                 </div>
                 <div class="rating-factors">
-                    <div class="factor-item"><div class="factor-bar-wrap"><div class="factor-bar" style="--fw: 80%;"></div></div><span>Response Rate: 80%</span></div>
-                    <div class="factor-item"><div class="factor-bar-wrap"><div class="factor-bar" style="--fw: 100%;"></div></div><span>Product Quality: 100%</span></div>
-                    <div class="factor-item"><div class="factor-bar-wrap"><div class="factor-bar" style="--fw: 100%;"></div></div><span>On-Time Delivery: 100%</span></div>
+                    <div class="factor-item"><div class="factor-bar-wrap"><div class="factor-bar" style="--fw:80%"></div></div><span>Response Rate: 80%</span></div>
+                    <div class="factor-item"><div class="factor-bar-wrap"><div class="factor-bar" style="--fw:100%"></div></div><span>Product Quality: 100%</span></div>
+                    <div class="factor-item"><div class="factor-bar-wrap"><div class="factor-bar" style="--fw:100%"></div></div><span>On-Time Delivery: 100%</span></div>
                 </div>
             </div>
 
-            <!-- Review Cards -->
             <div class="reviews-grid">
-                <div class="review-card reveal" style="--rc-delay: 0.1s;">
+                <div class="review-card reveal" style="--rc-delay:0.05s">
                     <div class="review-top">
                         <div class="reviewer-avatar">M</div>
-                        <div class="reviewer-info">
-                            <strong>Mohammed Irfan</strong>
-                            <span>Hospet, Karnataka</span>
-                        </div>
+                        <div class="reviewer-info"><strong>Mohammed Irfan</strong><span>Hospet, Karnataka</span></div>
                         <div class="review-stars">★★★★★</div>
                     </div>
                     <div class="review-tag">Paper Pulp Egg Trays</div>
@@ -512,13 +533,10 @@
                     <div class="review-date">December 2025</div>
                 </div>
 
-                <div class="review-card reveal" style="--rc-delay: 0.2s;">
+                <div class="review-card reveal" style="--rc-delay:0.1s">
                     <div class="review-top">
                         <div class="reviewer-avatar">V</div>
-                        <div class="reviewer-info">
-                            <strong>Vimalraj</strong>
-                            <span>Koppal, Karnataka</span>
-                        </div>
+                        <div class="reviewer-info"><strong>Vimalraj</strong><span>Koppal, Karnataka</span></div>
                         <div class="review-stars">★★★★★</div>
                     </div>
                     <div class="review-tag">Egg Boxes</div>
@@ -526,14 +544,11 @@
                     <div class="review-date">March 2026</div>
                 </div>
 
-                <div class="review-card reveal" style="--rc-delay: 0.3s;">
+                <div class="review-card reveal" style="--rc-delay:0.15s">
                     <div class="review-top">
                         <div class="reviewer-avatar">R</div>
-                        <div class="reviewer-info">
-                            <strong>Ravi Kumar</strong>
-                            <span>Tiruchirapalli, Tamil Nadu</span>
-                        </div>
-                        <div class="review-stars">★★★★<span style="opacity:0.4;">★</span></div>
+                        <div class="reviewer-info"><strong>Ravi Kumar</strong><span>Tiruchirapalli, Tamil Nadu</span></div>
+                        <div class="review-stars">★★★★<span style="opacity:.35">★</span></div>
                     </div>
                     <div class="review-tag">Bulk Paper Trays</div>
                     <p class="review-text">"Ordered in bulk for our poultry unit. Great turnaround time and excellent customer service from Mr. Subramanian. Will order again."</p>
@@ -543,13 +558,16 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT / CTA SECTION ===== -->
+    <!-- ════════════════════════════════════════
+         CONTACT CTA
+    ════════════════════════════════════════ -->
     <section class="section contact-section">
         <div class="container">
             <div class="contact-card reveal">
+                <div class="contact-card-glow"></div>
                 <div class="contact-text">
-                    <div class="section-eyebrow" style="color: var(--straw);">📬 Get In Touch</div>
-                    <h2>Ready to <em>go green</em> with your packaging?</h2>
+                    <div class="section-eyebrow" style="color:var(--straw)">📬 Get In Touch</div>
+                    <h2>Ready to <em>go green</em><br>with your packaging?</h2>
                     <p>Talk directly with S. Subramanian, our founder, for custom orders, bulk pricing, and same-day quotes.</p>
                     <div class="contact-details">
                         <div class="contact-item">📍 Koothappar — 620014, Tamil Nadu, India</div>
@@ -558,19 +576,24 @@
                     </div>
                 </div>
                 <div class="contact-actions">
-                    <a href="https://wa.me/919443302468?text=Hello!%20I'd%20like%20to%20enquire%20about%20Vpack%20Pulp%20Products." class="btn-primary btn-lg" target="_blank">
+                    <a href="https://wa.me/919443302468?text=Hello!%20I'd%20like%20to%20enquire%20about%20Vpack%20Pulp%20Products."
+                       class="btn-primary btn-lg ripple-btn confetti-btn magnetic-btn" target="_blank" style="color:#2E2416!important">
                         <span>💬</span> Chat on WhatsApp
                     </a>
-                    <a href="tel:+919443302468" class="btn-ghost btn-lg">
+                    <a href="tel:+919443302468"
+                       class="btn-ghost btn-lg ripple-btn magnetic-btn"
+                       style="color:var(--cream)!important;border-color:rgba(247,243,236,.4)">
                         <span>📞</span> Call Us Now
                     </a>
-                    <p class="cta-note">71% call response rate · Typically responds within a few hours</p>
+                    <p class="cta-note">71% call response rate · Responds within a few hours</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -596,7 +619,7 @@
                     <a href="#products">Moulded Egg Box</a>
                     <a href="#products">Pulp Tray</a>
                     <a href="#products">Packaging Box</a>
-                    <a href="https://wa.me/919443302468?text=Hello!%20I%20need%20a%20custom%20packaging%20solution." target="_blank">Custom Orders</a>
+                    <a href="https://wa.me/919443302468" target="_blank">Custom Orders</a>
                 </div>
                 <div class="footer-links-col">
                     <h4>Reach Us</h4>
@@ -613,7 +636,7 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+    <!-- Back to Top -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
     <script src="scripts.js"></script>
